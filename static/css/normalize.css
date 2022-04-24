@@ -66,6 +66,11 @@ pre {
   font-size: 1em; /* 2 */
 }
 
+/* change color ID */
+span{
+  color: red;
+}
+
 /* Text-level semantics
    ========================================================================== */
 

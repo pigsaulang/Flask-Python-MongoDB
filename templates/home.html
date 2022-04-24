@@ -3,20 +3,25 @@
 {% block content %}
   <div class="card-wrapper">
 
+    <div>
+    </div>
+
+
+
     <div class="card">
 
-      <h1 class="center">Create an Account</h1>
+      <h1 class="center">Tạo tài khoản</h1>
 
       <form name="signup_form">
-
+        
         <label for="name">Name</label>
-        <input type="text" name="name" class="field" required>
+        <input type="text" name="name" placeholder="Mời bạn nhập tên" class="field" required>
 
         <label for="email">Email</label>
-        <input type="email" name="email" class="field" required>
+        <input type="email" name="email" placeholder="Mời bạn nhập Email" class="field" required>
 
         <label for="password">Password</label>
-        <input type="password" name="password" class="field" required>
+        <input type="password" name="password" placeholder="Mời bạn nhập mật khẩu" class="field" required>
 
         <p class="error error--hidden"></p>
 
@@ -28,15 +33,15 @@
 
     <div class="card">
 
-      <h1 class="center">Log In</h1>
+      <h1 class="center">Đăng Nhập</h1>
 
       <form name="login_form">
 
         <label for="email">Email</label>
-        <input type="email" name="email" class="field" required>
+        <input type="email" name="email" placeholder="Mời bạn nhập Email" class="field" required>
 
         <label for="password">Password</label>
-        <input type="password" name="password" class="field" required>
+        <input type="password" name="password" placeholder="Mời bạn nhập mật khẩu" class="field" required>
 
         <p class="error error--hidden"></p>
 
@@ -48,3 +53,4 @@
   
   </div>
 {% endblock %}
+

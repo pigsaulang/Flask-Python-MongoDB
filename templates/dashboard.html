@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
+<head>
+<link rel="stylesheet" href="../static/css/styles.css"> 
+</head>
   <div class="card-wrapper">
 
     <div class="card">
@@ -14,13 +17,13 @@
     
     </div>
 
-    <div class="card">
+    <div class="card center__getinfo">
 
-      <h2 class="center">Your Info</h2>
-
+      <h1 class="center">Your Info</h1>
+      
       <p>
-        <strong>ID:</strong> {{ session['user']['_id'] }}<br>
-        <strong>Name:</strong> {{ session['user']['name'] }}<br>
+        <strong > ID:</strong> <span>{{ session['user']['_id'] }}</span><br>
+        <strong>Name:</strong>{{ session['user']['name'] }}<br>
         <strong>Email:</strong> {{ session['user']['email'] }}
       </p>
     

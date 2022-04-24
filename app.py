@@ -1,15 +1,19 @@
 from flask import Flask, render_template, session, redirect
 from functools import wraps
+from flask_pymongo import PyMongo
 import pymongo
 
+# Secret Key.
 app = Flask(__name__)
 app.secret_key = b'\xcc^\x91\xea\x17-\xd0W\x03\xa7\xf8J0\xac8\xc5'
 
-# Database
-client = pymongo.MongoClient('127.0.0.1', 27017)
-db = client.user_login_system
+# Database MongoDB.
+#
+client = pymongo.MongoClient('mongodb+srv://Tuananh567780:Anh250301@cluster0.ksimo.mongodb.net/?retryWrites=true&w=majority')
 
-# Decorators
+db = client['user']
+
+# Decorators.
 def login_required(f):
   @wraps(f)
   def wrap(*args, **kwargs):
@@ -20,7 +24,7 @@ def login_required(f):
   
   return wrap
 
-# Routes
+# Routes.
 from user import routes
 
 @app.route('/')
@@ -30,4 +34,7 @@ def home():
 @app.route('/dashboard/')
 @login_required
 def dashboard():
-  return render_template('dashboard.html')
+  return render_template('dashboard.html')  
+
+
+#

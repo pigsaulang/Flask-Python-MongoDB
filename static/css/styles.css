@@ -5,21 +5,21 @@
 /* Setup */
 :root {
   --black: #000000;
-  --almost-black: #263238;
+  --almost-black: #000000;
   --white: #ffffff;
   --almost-white: #FBFBFB;
   --grey-light: #CFD8DC;
-  --grey: #B0BEC5;
-  --grey-medium: #78909C;
-  --grey-dark: #455A64;
-  --primary: #1E88E5;
-  --primary-dark: #1976D2;
-  --secondary: #CFD8DC;
-  --secondary-dark: #B0BEC5;
+  --grey: #ffffff;
+  --grey-medium: #292020;
+  --grey-dark: #000000;
+  --primary: #000000;
+  --primary-dark: #000000;
+  --secondary: #000000;
+  --secondary-dark: #ffffff;
   --red: #EF4836;
 }
 
-* {
+* { 
   position: relative;
   box-sizing: border-box;
 }
@@ -37,24 +37,29 @@ body {
 .center {
   text-align: center;
 }
+/* Change color ID */
+.center__getinfo p span {
+  color:red;
+}
 
 h1 {
+  margin: 0.5em 0 1em;
+  font-size: 26px;
+  line-height: 1.2;
+  color: var(--red);
+}
+
+h2 {
   margin: 0.5em 0 1em;
   font-size: 26px;
   line-height: 1.2;
   color: var(--almost-black);
 }
 
-h2 {
-  margin: 0.5em 0 1em;
-  font-size: 20px;
-  line-height: 1.2;
-  color: var(--grey-dark);
-}
-
 p {
   margin: 24px 0;
 }
+
 
 /* Cards */
 .card-wrapper {
@@ -155,21 +160,25 @@ label {
   outline: none;
   cursor: pointer;
   display: inline-block;
-  background: var(--primary);
+  background: var(--red);
   transition: color .15s ease, background-color .15s ease;
 }
 
 .btn:hover {
-  background: var(--primary-dark);
+  background-color: #000000;
+  color: var(--white) ;
+  ;
 }
 
 .btn--secondary {
-  color: var(--almost-black);
+  color: #ffffff;
   background: var(--secondary);
 }
 
 .btn--secondary:hover {
-  background: var(--secondary-dark);
+  background-color: #ffffff;
+  color: #000000 ;
+  ;
 }
 
 input[type=submit] {
